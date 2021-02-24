@@ -10,8 +10,15 @@ auto greet(std::string name) {
     return stream.str();
 }
 
-int main(int argc, char** argv){
-    auto greeting = greet("Felix");
+int main(int argc, char* argv[]){
+    std::string greeting;
+    if (argc > 1) {
+        std::string name = argv[1];
+        greeting = greet(name);
+    } else {
+        greeting = "Hello World!";
+    }
+    
     std::cout << greeting << std::endl;
 
     return EXIT_SUCCESS;

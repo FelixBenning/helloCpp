@@ -4,16 +4,16 @@
 		{
 			"type": "cppbuild",
 			// name and description
-			"label": "Build Active File",
+			"label": "Build helloWorld",
 			"detail": "compiler: /usr/bin/g++",
 			// command
 			"command": "/usr/bin/g++",
 			"args": [
 				"-g",
-				"${file}",
+				"${workspaceFolder}/*.cpp",
 				"-o",
-				"${workspaceFolder}/bin/${fileBasenameNoExtension}",
-				"-Wall", "-Wextra"
+				"${workspaceFolder}/bin/helloWorld",
+				"-Wall", "-Wextra", "-Wpedantic"
 			],
 			// configure working directory, shell, etc.
 			"options": {

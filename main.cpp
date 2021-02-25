@@ -3,12 +3,8 @@
 #include <sstream>
 #include <string>
 
+#include "greet.h"
 
-auto greet(std::string name) {
-    std::ostringstream stream;
-    stream << "Hello, " << name << "!" << std::endl;
-    return stream.str();
-}
 
 int main(int argc, char* argv[]){
     std::string greeting;

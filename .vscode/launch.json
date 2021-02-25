@@ -5,10 +5,10 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Build & Debug (active file, g++)",
+			"name": "Build & Debug (g++)",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "${workspaceFolder}/bin/${fileBasenameNoExtension}",
+			"program": "${workspaceFolder}/bin/helloWorld",
 			"args": [
 			],
 			"stopAtEntry": false,
@@ -22,7 +22,7 @@
 					"ignoreFailures": true
 				}
 			],
-			"preLaunchTask": "Build Active File",
+			"preLaunchTask": "Build helloWorld",
 			"miDebuggerPath": "/usr/bin/gdb"
 		}
 	]

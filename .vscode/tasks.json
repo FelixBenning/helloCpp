@@ -9,10 +9,8 @@
 			// command
 			"command": "/usr/bin/g++",
 			"args": [
-				"-g",
-				"${workspaceFolder}/*.cpp",
-				"-o",
-				"${workspaceFolder}/bin/helloWorld",
+				"-g", "${workspaceFolder}/*.cpp",
+				"-o", "${workspaceFolder}/bin/helloWorld",
 				"-Wall", "-Wextra", "-Wpedantic"
 			],
 			// configure working directory, shell, etc.

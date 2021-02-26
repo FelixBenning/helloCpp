@@ -15,7 +15,6 @@ jobs:
         name:
         - Linux-GNU
         - Linux-Clang
-        - Linux-Clang-libc++
         # - MacOS-Clang
         - Windows-VisualStudio
         build_type: [ Debug ]

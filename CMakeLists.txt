@@ -14,7 +14,7 @@ include(CTest)
 ### compiler options
 if(MSVC) # is MS visual studio compiler
 	message(STATUS "Updating MSVC Compiler Options")
-	add_compile_options(/permissive- /MT) # standards conformance
+	add_compile_options(/permissive- /MT) # standards conformance, static version of runtime lib
 	add_compile_options("$<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:/W4;/WX>")
 	add_compile_options("$<$<CONFIG:Debug>:/Od>") # disable optimization
 	add_compile_options("$<$<OR:$<CONFIG:Release>,$<CONFIG:RelWithDebInfo>>:/02>") # fast

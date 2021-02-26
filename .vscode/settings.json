@@ -1,3 +1,7 @@
 {
-	"cmake.configureOnOpen": true
+	// https://github.com/microsoft/vscode-cmake-tools/blob/develop/docs/cmake-settings.md
+	"cmake.configureOnOpen": true,
+	"cmake.generator": "Ninja",
+	"cmake.buildDirectory": "${workspaceFolder}/${buildType}",
+	"cmake.buildBeforeRun": true
 }

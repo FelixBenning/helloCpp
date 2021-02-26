@@ -15,7 +15,7 @@ include(CTest)
 if(MSVC) # is MS visual studio compiler
 	message(STATUS "Updating MSVC Compiler Options")
 	add_compile_options(/permissive-) # standards conformance
-	add_compile_options("$<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:/Wall;/WX>")
+	add_compile_options("$<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:/W4;/WX>")
 	add_compile_options("$<$<CONFIG:Debug>:/Od>") # disable optimization
 	add_compile_options("$<$<OR:$<CONFIG:Release>,$<CONFIG:RelWithDebInfo>>:/02>") # fast
 	add_compile_options("$<$<CONFIG:MinSizeRel>:/O1>") # small

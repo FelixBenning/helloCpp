@@ -7,10 +7,27 @@ project(helloWorld VERSION 1.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # include test module (must be in top level file!)
 include(CTest)
+
+# compiler options
+message(STATUS "Updating Compiler Options")
+if(CMAKE_BUILD_TYPE MATCHES Debug)
+	message(STATUS "adding Debug compiler options")
+	add_compile_options("-Wall -Wextra -Werror -pedantic")
+	add_compile_options("-O0")
+endif()
+if(CMAKE_BUILD_TYPE MATCHES Release)
+	message(STATUS "adding Release compiler options")
+	add_compile_options("-03")
+endif()
+if(CMAKE_CXX_COMPILER_ID MATCHES MSVC)
+	message(STATUS "adding MSVC compiler options")
+	add_compile_options(/permissive-) # standards conformance
+endif()
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # add libraries
 add_subdirectory(greeter)

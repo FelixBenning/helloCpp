@@ -20,11 +20,11 @@ if(CMAKE_BUILD_TYPE MATCHES Debug)
 endif()
 if(CMAKE_BUILD_TYPE MATCHES Release)
 	message(STATUS "adding Release compiler options")
-	add_compile_options("-03")
+	add_compile_options("-O3")
 endif()
 if(CMAKE_CXX_COMPILER_ID MATCHES MSVC)
 	message(STATUS "adding MSVC compiler options")
-	add_compile_options(/permissive-) # standards conformance
+	add_compile_options("/permissive-") # standards conformance
 endif()
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)

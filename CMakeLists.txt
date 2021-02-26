@@ -7,7 +7,6 @@ project(helloWorld VERSION 1.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-
 # include test module (must be in top level file!)
 include(CTest)
 
@@ -29,6 +28,10 @@ else() # GNU or Clang
 	add_compile_options("$<$<CONFIG:MinSizeRel>:-Os>") # small
 endif()
 
+# generate `compile_commands.json` listing all the compile commands
+# useful for debugging and used by clangd (language server) to provide C++ IDE features
+# important as `target_include_directories` is translated to `-I` options
+# which provide information on where to find header files
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # add libraries

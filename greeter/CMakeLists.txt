@@ -1,4 +1,4 @@
-add_library(greeter greet.cpp)
+add_library(greeter STATIC greet.cpp)
 
 # PUBLIC include makes header file available to targets linking to the greeter
 # library (i.e. 'target_link_libraries(my_target [PUBLIC/PRIVATE] greeter)')
